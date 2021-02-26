@@ -26,7 +26,9 @@ dates = []
 
 for row in csv_file:
     highs.append(int(row[5]))
-    converted_date = datetime.strptime(row[2], "%Y-%m-%d")
+    converted_date = datetime.strptime(
+        row[2], "%Y-%m-%d"
+    )  # Converts to specific date time format
     dates.append(converted_date)
 
 # print(dates)
