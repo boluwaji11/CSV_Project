@@ -54,7 +54,7 @@ def main():
             sitka_station = row[sitka_station_index]  # Gets the station name
         except ValueError:
             print(
-                f"There is a missing data for {converted_date + timedelta(days=1)}"
+                f"There is a missing data for {converted_date + timedelta(days=1)}."
             )  # Display missing date
             print("This date is not included on the Sitka chart.")
         else:
@@ -77,7 +77,7 @@ def main():
             ]  # Gets the station name
         except ValueError:
             print(
-                f"There is a missing data for {converted_date + timedelta(days=1)}"
+                f"There is a missing data for {converted_date + timedelta(days=1)}."
             )  # Display missing date
             print("This date is not included on the Death Valley chart.")
         else:
