@@ -112,7 +112,7 @@ fig2.fill_between(
 
 # Common Y and X-Axis Labels
 fig.text(
-    0.04,
+    0.05,
     0.5,
     "Temperature (F)",
     va="center",
@@ -121,7 +121,7 @@ fig.text(
     fontsize=11,
 )
 
-fig.text(0.5, 0.04, "Date", va="center", ha="center", fontsize=11)
+fig.text(0.5, 0.05, "Date", va="center", ha="center", fontsize=11)
 
 # Display the charts
 plt.show()
