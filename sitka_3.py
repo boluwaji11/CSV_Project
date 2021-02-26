@@ -52,7 +52,7 @@ plt.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)
 plt.ylabel("Temperature (F)", fontsize=12)
 plt.tick_params(axis="both", labelsize=12)
 
-plt.show()
+# plt.show()
 
 fig2, a = plt.subplots(2)
 a[0].plot(dates, highs, c="red")
