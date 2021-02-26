@@ -76,9 +76,9 @@ for row in csv_death_valley:
         death_valley_dates.append(converted_date)
 
 
-# Plot two charts using subplots()
-
+# Plotting two charts using subplots()
 fig, chart = plt.subplots(2)
+
 # Sitka
 fig1 = chart[0]
 fig1.plot(sitka_dates, sitka_highs, c="red")
@@ -89,24 +89,39 @@ fig2 = chart[1]
 fig2.plot(death_valley_dates, death_valley_highs, c="red")
 fig2.plot(death_valley_dates, death_valley_lows, c="blue")
 
-# Format the date axis
+# Format the chart
 fig.autofmt_xdate()
 fig.suptitle(
-    f"Temperature comparison between {sitka_station} and {death_valley_station}"
+    f"Temperature comparison between {sitka_station} and {death_valley_station}",
+    fontsize=12,
 )
-fig1.set_title(sitka_station)
-fig2.set_title(death_valley_station)
+
+# Chart titles
+fig1.set_title(sitka_station, fontsize=11)
+fig2.set_title(death_valley_station, fontsize=11)
+
+# Fill Between the charts
+fig1.fill_between(sitka_dates, sitka_highs, sitka_lows, facecolor="blue", alpha=0.1)
+fig2.fill_between(
+    death_valley_dates,
+    death_valley_highs,
+    death_valley_lows,
+    facecolor="blue",
+    alpha=0.1,
+)
+
+# Common Y and X-Axis Labels
+fig.text(
+    0.07,
+    0.5,
+    "Temperature(F),
+    va="center",
+    ha="center",
+    rotation="vertical",
+    fontsize=11,
+)
+
+fig.text(0.5, 0.07, 'Date', va='center', ha='center', fontsize=11)
 
 # Display the charts
 plt.show()
-
-# plt.title("Daily High and Low Temperature - 2018", fontsize=16)
-# plt.xlabel("Dates", fontsize=10)
-# plt.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)
-# plt.ylabel("Temperature (F)", fontsize=12)
-# plt.tick_params(axis="both", labelsize=12)
-
-# plt.show()
-
-
-# plt.show()
