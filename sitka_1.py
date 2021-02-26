@@ -6,7 +6,7 @@ csv_file = csv.reader(
     open_file, delimiter=","
 )  # Reads the csv file and identifies the delimiter as comma
 
-header_row = next(csv_file)  # Skips the first row
+header_row = next(csv_file)  # Finds the first row
 
 # The enumerate() function returns both the index of each item and the value of each
 # item as you loop through a list.
