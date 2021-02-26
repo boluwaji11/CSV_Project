@@ -92,7 +92,7 @@ fig2.plot(death_valley_dates, death_valley_lows, c="blue")
 # Format the chart
 fig.autofmt_xdate()
 fig.suptitle(
-    f"Temperature comparison between {sitka_station} and {death_valley_station}",
+    f"Temperature comparison between {sitka_station} and {death_valley_station} in 2018",
     fontsize=12,
 )
 
