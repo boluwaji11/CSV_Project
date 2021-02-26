@@ -112,16 +112,19 @@ fig2.fill_between(
 
 # Common Y and X-Axis Labels
 fig.text(
-    0.07,
+    0.04,
     0.5,
-    "Temperature(F),
+    "Temperature (F)",
     va="center",
     ha="center",
     rotation="vertical",
     fontsize=11,
 )
 
-fig.text(0.5, 0.07, 'Date', va='center', ha='center', fontsize=11)
+fig.text(0.5, 0.04, "Date", va="center", ha="center", fontsize=11)
 
 # Display the charts
 plt.show()
+
+# Save a PNG file of the chart
+fig.savefig("Temperature_sitka_death_valley_2018.png", dpi=300)
